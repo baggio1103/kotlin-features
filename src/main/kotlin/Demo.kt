@@ -1,6 +1,6 @@
 fun main() {
     val a = run {
-        "shit"
+        "Success"
     }
     println(a)
 }
