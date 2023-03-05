@@ -21,6 +21,8 @@ val calculator = { a: Int, b: Int, function: (x: Int, y: Int) -> Int  ->
 // Function types with Receiver
 // Receiver refers to the type that invokes this method
 // in this example, String type is the receiver
+// This function type repeatWord can be invoked
+// by String type objects only
 val repeatWord : String.(Int) -> String = { times ->
     repeat(times)
 }
