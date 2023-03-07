@@ -23,7 +23,7 @@ open class Tiger(private val origin: String) {
     }
 }
 
-class SiberianTiger: Tiger("Siberian")
+class SiberianTiger: Tiger("Siberia")
 
 
 
