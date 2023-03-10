@@ -8,7 +8,7 @@ fun <T> asList(vararg values: T): List<T> {
     for (value in values) {
         result.add(value)
     }
-    return result;
+    return result
 }
 
 // Infix functions are functions that are

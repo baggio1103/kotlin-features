@@ -1,24 +1,31 @@
 package functions.lamda
 
+fun <T, R> lambdaFunction(value: T, block: (T) -> R): R {
+    return block(value)
+}
 
-fun stringLength(string: String) = string.length
-
-fun getString(): String? = "hello"
+//Non Local Returns
+// To return from a lambda, using return keyword is not enough
+// it is needed to use a label as well, i.e. the name of the lambda
+// as shown in the example below
+fun <T> function(value: T) {
+    val lambdaFunction = lambdaFunction(value) {
+        when (value) {
+            is Int -> {
+                for (i in 0..value) {
+                    if (i == 11) {
+                        return@lambdaFunction 1231231231
+                    }
+                }
+            }
+            else -> return@lambdaFunction "Unknown type"
+        }
+    }
+    println(lambdaFunction)
+}
 
 fun main() {
-    var number: Int? = null
-    number = 2312
-    println(number)
-
-    var inferredNonNull = "Non null variable"
-    inferredNonNull = null.toString()
-    println(inferredNonNull)
-
-    var nullableString: String? = null
-    nullableString = null
-    println(nullableString)
-    nullableString = "Nullable string"
-    println(nullableString)
-    println(stringLength(nullableString))
-    val string = getString()
+    function("Some function")
+    function(20)
 }
+
