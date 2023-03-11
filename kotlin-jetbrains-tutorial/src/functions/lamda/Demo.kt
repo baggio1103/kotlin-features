@@ -29,7 +29,7 @@ val repeatWord : String.(Int) -> String = { times ->
 
 
 // A function type with no explicit return type
-val implicitRepeatFunction = { a: String, b: Int -> Int
+val implicitRepeatFunction = { a: String, b: Int ->
     a.repeat(b)
 }
 
