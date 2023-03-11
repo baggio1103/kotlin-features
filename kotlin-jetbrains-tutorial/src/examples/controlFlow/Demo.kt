@@ -1,6 +1,6 @@
 package examples.controlFlow
 
-class Car(val name: String) {
+class Car(private val name: String) {
     override fun toString(): String {
         return "Car{name: $name}"
     }
