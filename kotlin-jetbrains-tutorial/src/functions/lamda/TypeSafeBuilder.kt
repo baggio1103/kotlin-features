@@ -6,6 +6,10 @@ class Html {
         println("Shit")
     }
 
+    fun footer() {
+        println("This is a footer")
+    }
+
 }
 
 fun html(init: Html.() -> Unit): Html {
