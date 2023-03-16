@@ -1,6 +1,6 @@
 package functions.inline
 
-fun higherOrderFunc(string: String, lambda: (String) -> Unit) {
+inline fun higherOrderFunc(string: String, lambda: (String) -> Unit) {
     lambda(string)
 }
 
