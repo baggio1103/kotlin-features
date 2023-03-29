@@ -8,7 +8,7 @@ open class Shape {
 
 }
 
-abstract class WildShape: Polygon() {
+abstract class WildShape: Shape() {
 
     abstract override fun draw()
 
@@ -17,7 +17,7 @@ abstract class WildShape: Polygon() {
 class WildTriangleShape: WildShape() {
 
     override fun draw() {
-        println("Drawing a wild tringle shape")
+        println("Drawing a wild triangle shape")
     }
 
 }

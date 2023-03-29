@@ -7,7 +7,9 @@ class Constructor(name: String) {
         println("First init block")
     }
 
-    constructor() : this("Default constructor")
+    constructor() : this("Default constructor") {
+        println("Initializing a default constructor")
+    }
 
     init {
         println("Second init block")
@@ -34,6 +36,9 @@ class Constructors(i: Int) {
 }
 
 fun main() {
+    Constructor("Primary constructor")
+    println("-------------------------------------------")
     Constructor()
+    println("-------------------------------------------")
     Constructors(11)
 }
