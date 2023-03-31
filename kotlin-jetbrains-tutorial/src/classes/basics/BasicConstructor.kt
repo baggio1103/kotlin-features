@@ -2,16 +2,20 @@ package classes.basics
 
 class Person(val name: String, val pets: MutableList<Pet> = mutableListOf()) {
     override fun toString(): String {
-        return "Pets: $pets"
+        return "Person: $name, pets: $pets"
     }
 
 }
 
-class Pet(name: String, owner: Person) {
+class Pet(private val name: String, private val owner: Person) {
 
     init {
         owner.pets.add(this)
         println("Adding current pet $name to person: ${owner.name}")
+    }
+
+    override fun toString(): String {
+        return "Pet: $name"
     }
 
 }
@@ -19,4 +23,6 @@ class Pet(name: String, owner: Person) {
 fun main() {
     val person = Person("baggio")
     val richie = Pet("richie", person)
+    println(person)
+    println(richie)
 }
