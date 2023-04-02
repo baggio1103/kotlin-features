@@ -1,5 +1,9 @@
 package classes.extension
 
+// Extension functions are visible
+// from the original class. However, if you still have access to
+// the original class, there is no meaning of extension functions,
+// since its better to define it inside the original class
 class Polygon {
 
     fun draw() {
