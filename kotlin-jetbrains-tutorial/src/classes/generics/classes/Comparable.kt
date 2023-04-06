@@ -1,4 +1,4 @@
-package classes.generics
+package classes.generics.classes
 
 interface Comparable<in T> {
 

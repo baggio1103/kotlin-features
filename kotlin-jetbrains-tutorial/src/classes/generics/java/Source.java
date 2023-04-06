@@ -16,4 +16,12 @@ public class Source<T> {
         this.value = value;
     }
 
+//    public static void main(String[] args) {
+//        show(new Source<>(1.12131));
+//    }
+//
+//    public static <T extends Number> void show(Source<T> x) {
+//        Source<Double> y = x; // This is completely safe since Double is a subtype of Number
+//    }
+
 }
