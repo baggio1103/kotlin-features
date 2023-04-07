@@ -15,7 +15,6 @@ class FilledRectangle: Rectangle() {
     inner class Filler {
         private fun fill() { println("Filling") }
         fun drawAndFill() {
-            super@FilledRectangle.draw()
             super@FilledRectangle.draw() // Calls Rectangle's implementation of draw()
             fill()
             println("Drawn a filled rectangle with color ${super@FilledRectangle.borderColor}") // Uses Rectangle's implementation of borderColor's get()
@@ -27,6 +26,6 @@ fun main() {
     val fr = FilledRectangle()
     fr.draw()
 
-    val innerFiller = FilledRectangle().Filler()
+    val innerFiller = fr.Filler()
     innerFiller.drawAndFill()
 }
