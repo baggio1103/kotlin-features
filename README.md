@@ -31,3 +31,6 @@ as I advance my understanding of this amazing Language.
   - [Kotlin TypeAliases](https://github.com/baggio1103/kotlin-features/tree/main/kotlin-jetbrains-tutorial/src/classes/typealias)
 - [Kotlin Multithreading ...loading]() 
 
+Each reference leads to a package with several
+examples and explanations inside.
+
