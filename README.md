@@ -6,6 +6,8 @@ A repository that displays the Kotlin features, such as
 Coroutines, Channels, Exceptions, etc. with the examples, 
 as I advance my understanding of this amazing Language.
 
+![img](https://www.staffworx.co.uk/wp-content/uploads/2020/12/kotlin-logo-3.jpg)
+
 #### Content
 - [Kotlin Function](https://github.com/baggio1103/kotlin-features/tree/main/kotlin-jetbrains-tutorial/src/functions)
   - [General Overview](https://github.com/baggio1103/kotlin-features/blob/main/kotlin-jetbrains-tutorial/src/functions/GeneralFunctions.kt)

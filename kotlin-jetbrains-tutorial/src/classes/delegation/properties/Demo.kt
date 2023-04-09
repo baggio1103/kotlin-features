@@ -12,6 +12,10 @@ class Example(val name: String) {
     }
 }
 
+// To provide a delegate for a property,
+// you need to provide an object that implements two methods:
+// operator fun <T> setValue(example: Any, property: KProperty<*>, newValue: T) -> for `var` properties
+//operator fun <T> getValue(example: Any, property: KProperty<*>): Int -> for both `val` and `var` properties
 class PropertyDelegation(private var delegatedValue: Int) {
     operator fun getValue(example: Example, property: KProperty<*>): Int {
         println("Getting of property: ${property.name}. Value retrieval has been delegated to class: $this")
