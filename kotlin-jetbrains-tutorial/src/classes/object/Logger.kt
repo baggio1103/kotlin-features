@@ -32,8 +32,8 @@ class Logging {
 
 fun main() {
 
-    // Lines 21 and 22 are equal. Companion object reference can be omitted
-    Logging.log()
+    // Lines 36 and 37 are equal. Companion object reference can be omitted
+    Logging.Logger.log()
     Logging.log()
 
     Logging.Printer.print()
