@@ -27,6 +27,6 @@ fun main() {
 
 suspend fun doNetWorkCall(host: String): String {
     delay(2000L)
-    println("Network call has been executed in Thread: ${Thread.currentThread().name}")
+    println("Network call to $host has been executed in Thread: ${Thread.currentThread().name}")
     return "Network call response from host: $host - Kotlin is the best!!!"
 }
