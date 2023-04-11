@@ -3,7 +3,7 @@ package multithreading.coroutines
 import kotlinx.coroutines.*
 
 /**
- *  job.cancel() - cancel a coroutine if it is not completed.
+ *  job.cancel() - cancels a coroutine if it is not completed.
  *  job.active - returns current state of a coroutine
  **/
 fun main() {

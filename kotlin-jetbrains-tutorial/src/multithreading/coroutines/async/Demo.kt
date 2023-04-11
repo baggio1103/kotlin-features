@@ -2,21 +2,22 @@ package multithreading.coroutines.async
 
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.async
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 suspend fun main() {
-
-    val job = GlobalScope.launch {
-        val async = async {
-            universities()
-        }
+    val async = GlobalScope.async {
         println("Send request to universities")
-        async.invokeOnCompletion {
-            println("Request executed")
-        }
-        val universities = async.await()
-        println(universities)
+        universities()
     }
-    job.join()
-
+    println("Main continues execution")
+    GlobalScope.launch {
+        async.await().forEach {
+            println("$it H2 ${Thread.currentThread().name}")
+        }
+    }
+    val universities = async.await()
+    universities.forEach {
+        println("$it H1 ${Thread.currentThread().name}")
+    }
 }
