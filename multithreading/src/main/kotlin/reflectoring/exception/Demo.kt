@@ -5,13 +5,9 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import reflectoring.logger
-import reflectoring.longRunningTask
-import kotlin.time.Duration.Companion.milliseconds
 
 fun main() = runBlocking {
-
     logger.info("Starting execution")
-
     val job = launch {
         dbCall()
     }
