@@ -2,10 +2,8 @@ package rockthejvm.scheduling
 
 import kotlinx.coroutines.asCoroutineDispatcher
 import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import reflectoring.logger
-import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
 suspend fun main() {
