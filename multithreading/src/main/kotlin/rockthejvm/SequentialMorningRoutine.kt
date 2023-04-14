@@ -32,7 +32,6 @@ suspend fun preparingCoffee() {
 
 suspend fun sequentialMorningRouting() {
     coroutineScope {
-        launch {  }
         bathTime()
     }
     coroutineScope {

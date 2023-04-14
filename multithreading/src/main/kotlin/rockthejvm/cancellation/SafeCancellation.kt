@@ -24,7 +24,7 @@ suspend fun forgettingTheBirthdayAndCleaningTheDesk() {
 //        Another way to clean up the resources is to use invokeOnCompletion,
 //        it receives a nullable Throwable as an argument,
 //        the ex why the coroutine was cancelled
-//        workingJob.invokeOnCompletion { ex: Throwable?
+//        workingJob.invokeOnCompletion { ex: Throwable? ->
 //            logger.info(ex)
 //            desk.close()
 //        }
