@@ -8,16 +8,17 @@ suspend fun main() {
     val job = GlobalScope.launch {
        val innerJob = launch {
            try {
+               println("Before")
                delay(1000L)
                println("Executing")
            } catch (ex: Exception) {
                println("Inner job has been cancelled")
-               throw ex
                ex.printStackTrace()
+               throw ex
            }
            println("Finished")
        }
-        delay(300)
+        delay(10)
         innerJob.cancel()
     }
 
