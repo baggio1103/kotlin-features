@@ -6,7 +6,6 @@ import kotlinx.coroutines.currentCoroutineContext
 import kotlinx.coroutines.newCoroutineContext
 import reflectoring.logger
 import kotlin.coroutines.coroutineContext
-import kotlin.math.log
 
 @OptIn(InternalCoroutinesApi::class)
 suspend fun main() {

@@ -3,7 +3,7 @@ package airplane;
 public class AirplaneLaunch {
 
     public static void main(String[] args) throws InterruptedException {
-        var airplane = new Airplane(1, 1);
+        var airplane = new Airplane(1, 3);
         var camera = new Thread(() -> {
             try {
                 airplane.cameraWorkProcess();
