@@ -1,21 +1,26 @@
 package synchronization
 
 import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 suspend fun main() {
     val counter = Counter()
     coroutineScope {
         launch {
-            for (i in 0 .. 2000) {
+            delay(200)
+            for (i in 0 until  2000) {
                 counter.increment()
             }
         }
+        println("First coroutine started execution")
         launch {
-            for (i in 0 .. 100) {
+            delay(200)
+            for (i in 0 until  100) {
                 counter.increment()
             }
         }
+        println("Second coroutine started its execution")
     }
     counter.logCounter()
 }
