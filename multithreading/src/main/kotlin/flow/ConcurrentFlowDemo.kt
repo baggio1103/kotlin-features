@@ -19,7 +19,9 @@ suspend fun main() {
     println("Sequential exec time: $sequentialExecTime")
 
     /**
-     * Flow.buffer() - adds concurrency to flow
+     * Flow.buffer() - adds concurrency to flow,
+     * then collect() runs on its own coroutine
+     * and emit() runs on its owns coroutine
      * */
     val concurrentExecTime = measureTimeMillis {
         coroutineScope {
