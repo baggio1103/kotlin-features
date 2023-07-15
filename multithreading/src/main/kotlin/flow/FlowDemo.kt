@@ -5,6 +5,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.toList
+import java.time.LocalTime
 import java.util.*
 
 val random = Random()
@@ -16,7 +17,6 @@ suspend fun main() {
         println("Flow: $userFlow")
         println("List: $userList")
     }
-
 }
 
 fun getUsers(): Flow<User> = flow {
@@ -40,7 +40,8 @@ fun getUsers(): Flow<User> = flow {
 suspend fun getUsersAsList(): List<User> = getUsers().toList()
 
 suspend fun getByIdAndName(id: Int, name: String): User {
-    delay(100)
+    delay(500)
+    println("Time: ${LocalTime.now()}")
     return User(id, name)
 }
 
