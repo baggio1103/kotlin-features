@@ -1,4 +1,4 @@
-package synchronization
+package synchronization.exampleOne
 
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock

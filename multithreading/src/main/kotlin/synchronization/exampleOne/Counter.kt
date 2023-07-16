@@ -1,4 +1,4 @@
-package synchronization
+package synchronization.exampleOne
 
 class Counter {
 

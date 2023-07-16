@@ -1,4 +1,4 @@
-package synchronization
+package synchronization.exampleOne
 
 import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.launch

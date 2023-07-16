@@ -1,4 +1,4 @@
-package synchronization
+package synchronization.exampleOne
 
 import kotlin.concurrent.thread
 
