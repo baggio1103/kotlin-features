@@ -13,7 +13,7 @@
         <maven.compiler.target>19</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <kotlin.version>1.8.20</kotlin.version>
-        <kotlin.coroutines.version>1.6.4</kotlin.coroutines.version>
+        <kotlin.coroutines.version>1.7.1</kotlin.coroutines.version>
         <logging.version>2.20.0</logging.version>
     </properties>1.6.4
 
