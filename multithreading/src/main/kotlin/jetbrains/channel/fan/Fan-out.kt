@@ -22,12 +22,12 @@ fun CoroutineScope.launchProcessor(id: Int, channel: ReceiveChannel<Int>)  {
 }
 
 suspend fun main() {
-    runBlocking {
+    coroutineScope {
         val produceNumbers = produceNumbers()
         repeat(10) {
             launchProcessor(it, produceNumbers)
         }
-        delay(5000)
+        delay(3000)
         produceNumbers.cancel()
     }
 }
